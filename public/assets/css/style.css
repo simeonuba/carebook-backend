@@ -1,0 +1,52 @@
+
+#error   .circle-bar{
+    border-color: #b20;
+}
+#error   .fa{
+color: #b20;
+}
+.circle-bar{
+    height: 80px;
+    width:80px;
+    border-radius: 50%;
+    text-align: center;
+    border: 5px solid green;
+}
+.circle-bar .fa{
+    font-size: 30px;
+    padding-top: 15px;
+    margin-top: -0px;
+margin-left: -10px; color: green;
+    text-align: center;
+}
+.form-control{
+    height: 60px;
+    color: #A7A8AA;
+    border-radius: 10px;
+    background-color: #EEEFF1;
+    border: 0;
+    padding-left: 60px !important;
+}
+.fa{
+    position: absolute; margin-top: 22px;margin-left:20px;
+    color: #A7A8AA;
+    font-weight: 700;
+
+}
+.bsh{
+    border: 0;
+    dbox-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+.btnp{
+    width: 50%;
+    border-radius: 10px;
+    text-align: center;
+    color:#fff;
+    border: 0;
+    align-items: center;
+    align-self: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #5A52E3;
+}

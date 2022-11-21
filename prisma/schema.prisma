@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model cards {
+  id          Int      @id @default(autoincrement())
+  user_id     Int      @unique(map: "user_id")
+  card_name   String   @db.VarChar(300)
+  card_number String   @db.VarChar(300)
+  card_type   String   @db.VarChar(100)
+  country     String   @db.VarChar(200)
+  expiry_date DateTime @db.Date
+  status      String   @default("active") @db.VarChar(100)
+}
+
+model users {
+  id       Int      @id @default(autoincrement())
+  fullname String   @db.VarChar(300)
+  email    String   @unique(map: "email") @db.VarChar(300)
+  password String   @db.VarChar(300)
+  pin      Int?
+  createAt DateTime @default(now()) @db.DateTime(0)
+  updateAt DateTime @default(now()) @db.DateTime(0)
+  status   String   @default("active") @db.VarChar(200)
+}
+
+model verifyset {
+  id          Int    @id @default(autoincrement())
+  user_id     Int    @unique(map: "user_id")
+  doc_type    String @db.VarChar(300)
+  doc_upload  Bytes  @db.Blob
+  photo       Bytes  @db.Blob
+  nationality String @db.VarChar(100)
+  status      String @default("pending") @db.VarChar(100)
+}
