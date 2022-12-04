@@ -47,7 +47,6 @@ $(document).ready(function () {
           $('#target').html('<div class="alert alert-danger">Error Submitting the form</div>');
   
   
-  
         }
       });
       event.preventDefault();

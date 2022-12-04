@@ -38,3 +38,13 @@ model verifyset {
   nationality String @db.VarChar(100)
   status      String @default("pending") @db.VarChar(100)
 }
+
+model wallet {
+  id          Int      @id @default(autoincrement())
+  user_id     Int      @unique(map: "user_id")
+  account_bal Float    @default(0) @db.Float
+  status      String?  @default("Active") @db.VarChar(11)
+  trans_pin   Int
+  createAt    DateTime @default(now()) @db.DateTime(0)
+  updateAt    DateTime @default(now()) @db.DateTime(0)
+}
