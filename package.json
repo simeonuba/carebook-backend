@@ -33,6 +33,7 @@
     "validator": "^13.7.0",
     "validatorjs": "^3.22.1"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/simeonuba/carebook-backend.git"
