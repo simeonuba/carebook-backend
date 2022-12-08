@@ -6,8 +6,8 @@
   "scripts": {
     "build": "rimraf dist && babel src --out-dir dist  --copy-files",
     "start": "node dist/app.js",
-    "nodemon": "nodemon --exec babel-node src/app.js",
-    "start:dev": "nodemon --exec babel-node src/app.js"
+    "nodemon": "nodemon --exec babel-node app.js",
+    "start:dev": "nodemon --exec babel-node app.js"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +17,6 @@
     "prisma": "^4.5.0",
     "rimraf": "^3.0.2"
   },
-  "type": "module",
   "dependencies": {
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.20.2",
